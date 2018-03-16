@@ -11,4 +11,6 @@ public interface IUserService {
 
     ServerResponse<User> login(String usename, String password);
 
+    ServerResponse<User> register(User user);
+
 }

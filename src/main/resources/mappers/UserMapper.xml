@@ -156,6 +156,10 @@
     select count(1) from omall_user
     where username = #{username}
   </select>
+  <select id="checkEmail" resultType="int" parameterType="string">
+    select count(1) from omall_user
+    where email = #{email}
+  </select>
   <select id="selectLogin" resultMap="BaseResultMap" parameterType="map">--map意为"传多个参数"
     select
     <include refid="Base_Column_List" />
