@@ -1,6 +1,7 @@
 package com.omall.dao;
 
 import com.omall.pojo.User;
+import org.apache.ibatis.annotations.Param;
 
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
@@ -17,7 +18,9 @@ public interface UserMapper {
 
     int checkUserName(String userName);
 
-    User selectLogin(String userName, String password);
+    User selectLogin(@Param("username") String userName, @Param("password") String password);
 
     int checkEmail(String email);
+
+    String selectQuestionByUserName(String username);
 }

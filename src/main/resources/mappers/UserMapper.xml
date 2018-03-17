@@ -167,4 +167,9 @@
     where username = #{username}
     and password = #{password}
   </select>
+  <select id="selectQuestionByUserName" resultType="string" parameterType="string">
+    SELECT
+    question from omall_user
+    where username = #{username}
+  </select>
 </mapper>
