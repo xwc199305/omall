@@ -172,4 +172,30 @@
     question from omall_user
     where username = #{username}
   </select>
+  <select id="checkAnswer" resultType="int" parameterType="map">
+    SELECT
+    count(1) from omall_user
+    where username = #{username}
+    and question = #{question}
+    and answer = #{answer}
+  </select>
+  <update id="updatePasswordByUsername" parameterType="map">
+    update omall_user
+    set password = #{passwordNew}
+    where username = #{username}
+  </update>
+  <select id="checkPassword" parameterType="map" resultType="int">
+    SELECT
+    count(1)
+    from omall_user
+    where id = #{userId}
+    and password = #{password}
+  </select>
+  <select id="checkEmailByUserId" parameterType="map" resultType="int">
+    SELECT
+    count(1)
+    from omall_user
+    where email = #{email}
+    and id != #{userId}
+  </select>
 </mapper>
