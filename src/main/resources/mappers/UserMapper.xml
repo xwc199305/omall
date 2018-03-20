@@ -160,7 +160,7 @@
     select count(1) from omall_user
     where email = #{email}
   </select>
-  <select id="selectLogin" resultMap="BaseResultMap" parameterType="map">--map意为"传多个参数"
+  <select id="selectLogin" resultMap="BaseResultMap" parameterType="map">
     select
     <include refid="Base_Column_List" />
     from omall_user

@@ -8,7 +8,7 @@ import com.omall.pojo.User;
  */
 public interface IUserService {
 
-    ServerResponse<User> login(String usename, String password);
+    ServerResponse<User> login(String username, String password);
 
     ServerResponse<String> register(User user);
 
